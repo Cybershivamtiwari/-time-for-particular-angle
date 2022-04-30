@@ -1,0 +1,22 @@
+#time for particular angle
+import math
+#angle between two hands of the clock
+x=float(input("input the starting hour , for ex if you want in between 4&5"))
+y=float(input("input the angle ex: 00 to 359"))#4'o clock
+q=x*30
+if y<360-q:
+    y=360-y
+if y<q:
+    t=abs(y-q/5.5)
+    j=int(t)
+    p=int((t-j)*60)
+    print(x,":",j,":",p)
+    k=abs(y+q)/5.5
+    l=int(k)
+    f=int((l-k)*60)
+    print(x,":",l,":",f)
+elif y>q:
+    k=abs(y+q)/5.5
+    l=int(k)
+    f=int((l-k)*60)
+    print(x,":",l,":",f)
